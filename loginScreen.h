@@ -67,14 +67,18 @@ namespace AirConsturct {
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->loginTitle);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"loginScreen";
 			this->ShowIcon = false;
+			this->Load += gcnew System::EventHandler(this, &loginScreen::loginScreen_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void loginScreen_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }
